@@ -10,14 +10,14 @@ SET check_function_bodies = false;
 SET client_min_messages = warning;
 
 --
--- Name: plpgsql; Type: EXTENSION; Schema: -; Owner:
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
 --
 
 CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
 
 
 --
--- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner:
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
 --
 
 COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
@@ -84,7 +84,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: academic_consulting_hours; Type: TABLE; Schema: public; Owner: usuario2; Tablespace:
+-- Name: academic_consulting_hours; Type: TABLE; Schema: public; Owner: usuario2; Tablespace: 
 --
 
 CREATE TABLE academic_consulting_hours (
@@ -120,7 +120,7 @@ ALTER SEQUENCE academic_consulting_hours_id_seq OWNED BY academic_consulting_hou
 
 
 --
--- Name: academic_period; Type: TABLE; Schema: public; Owner: usuario2; Tablespace:
+-- Name: academic_period; Type: TABLE; Schema: public; Owner: usuario2; Tablespace: 
 --
 
 CREATE TABLE academic_period (
@@ -153,7 +153,7 @@ ALTER SEQUENCE academic_period_id_seq OWNED BY academic_period.id;
 
 
 --
--- Name: class_hours; Type: TABLE; Schema: public; Owner: usuario2; Tablespace:
+-- Name: class_hours; Type: TABLE; Schema: public; Owner: usuario2; Tablespace: 
 --
 
 CREATE TABLE class_hours (
@@ -189,7 +189,7 @@ ALTER SEQUENCE class_hours_id_seq OWNED BY class_hours.id;
 
 
 --
--- Name: student; Type: TABLE; Schema: public; Owner: usuario2; Tablespace:
+-- Name: student; Type: TABLE; Schema: public; Owner: usuario2; Tablespace: 
 --
 
 CREATE TABLE student (
@@ -223,7 +223,7 @@ ALTER SEQUENCE student_id_seq OWNED BY student.id;
 
 
 --
--- Name: student_period; Type: TABLE; Schema: public; Owner: usuario2; Tablespace:
+-- Name: student_period; Type: TABLE; Schema: public; Owner: usuario2; Tablespace: 
 --
 
 CREATE TABLE student_period (
@@ -257,7 +257,7 @@ ALTER SEQUENCE student_period_id_seq OWNED BY student_period.id;
 
 
 --
--- Name: student_requests_tutoring; Type: TABLE; Schema: public; Owner: usuario2; Tablespace:
+-- Name: student_requests_tutoring; Type: TABLE; Schema: public; Owner: usuario2; Tablespace: 
 --
 
 CREATE TABLE student_requests_tutoring (
@@ -274,7 +274,7 @@ CREATE TABLE student_requests_tutoring (
 ALTER TABLE public.student_requests_tutoring OWNER TO usuario2;
 
 --
--- Name: subject; Type: TABLE; Schema: public; Owner: usuario2; Tablespace:
+-- Name: subject; Type: TABLE; Schema: public; Owner: usuario2; Tablespace: 
 --
 
 CREATE TABLE subject (
@@ -286,7 +286,7 @@ CREATE TABLE subject (
 ALTER TABLE public.subject OWNER TO usuario2;
 
 --
--- Name: teacher; Type: TABLE; Schema: public; Owner: usuario2; Tablespace:
+-- Name: teacher; Type: TABLE; Schema: public; Owner: usuario2; Tablespace: 
 --
 
 CREATE TABLE teacher (
@@ -343,7 +343,7 @@ ALTER SEQUENCE student_requests_tutoring_id_seq OWNED BY student_requests_tutori
 
 
 --
--- Name: subject_class_hours; Type: TABLE; Schema: public; Owner: usuario2; Tablespace:
+-- Name: subject_class_hours; Type: TABLE; Schema: public; Owner: usuario2; Tablespace: 
 --
 
 CREATE TABLE subject_class_hours (
@@ -398,7 +398,7 @@ ALTER SEQUENCE subject_id_seq OWNED BY subject.id;
 
 
 --
--- Name: teacher_has_tutoring_hours; Type: TABLE; Schema: public; Owner: usuario2; Tablespace:
+-- Name: teacher_has_tutoring_hours; Type: TABLE; Schema: public; Owner: usuario2; Tablespace: 
 --
 
 CREATE TABLE teacher_has_tutoring_hours (
@@ -428,7 +428,7 @@ CREATE VIEW teacher_available_tutoring AS
 ALTER TABLE public.teacher_available_tutoring OWNER TO usuario2;
 
 --
--- Name: teacher_class; Type: TABLE; Schema: public; Owner: usuario2; Tablespace:
+-- Name: teacher_class; Type: TABLE; Schema: public; Owner: usuario2; Tablespace: 
 --
 
 CREATE TABLE teacher_class (
@@ -462,7 +462,7 @@ ALTER SEQUENCE teacher_class_id_seq OWNED BY teacher_class.id;
 
 
 --
--- Name: teacher_subject; Type: TABLE; Schema: public; Owner: usuario2; Tablespace:
+-- Name: teacher_subject; Type: TABLE; Schema: public; Owner: usuario2; Tablespace: 
 --
 
 CREATE TABLE teacher_subject (
@@ -538,7 +538,7 @@ ALTER SEQUENCE teacher_id_seq OWNED BY teacher.id;
 
 
 --
--- Name: teacher_period; Type: TABLE; Schema: public; Owner: usuario2; Tablespace:
+-- Name: teacher_period; Type: TABLE; Schema: public; Owner: usuario2; Tablespace: 
 --
 
 CREATE TABLE teacher_period (
@@ -1011,7 +1011,7 @@ SELECT pg_catalog.setval('teacher_subject_id_seq', 11, true);
 
 
 --
--- Name: academic_consulting_hours_pkey; Type: CONSTRAINT; Schema: public; Owner: usuario2; Tablespace:
+-- Name: academic_consulting_hours_pkey; Type: CONSTRAINT; Schema: public; Owner: usuario2; Tablespace: 
 --
 
 ALTER TABLE ONLY academic_consulting_hours
@@ -1019,7 +1019,7 @@ ALTER TABLE ONLY academic_consulting_hours
 
 
 --
--- Name: academic_period_pkey; Type: CONSTRAINT; Schema: public; Owner: usuario2; Tablespace:
+-- Name: academic_period_pkey; Type: CONSTRAINT; Schema: public; Owner: usuario2; Tablespace: 
 --
 
 ALTER TABLE ONLY academic_period
@@ -1027,7 +1027,7 @@ ALTER TABLE ONLY academic_period
 
 
 --
--- Name: class_hours_pkey; Type: CONSTRAINT; Schema: public; Owner: usuario2; Tablespace:
+-- Name: class_hours_pkey; Type: CONSTRAINT; Schema: public; Owner: usuario2; Tablespace: 
 --
 
 ALTER TABLE ONLY class_hours
@@ -1035,7 +1035,7 @@ ALTER TABLE ONLY class_hours
 
 
 --
--- Name: student_period_pkey; Type: CONSTRAINT; Schema: public; Owner: usuario2; Tablespace:
+-- Name: student_period_pkey; Type: CONSTRAINT; Schema: public; Owner: usuario2; Tablespace: 
 --
 
 ALTER TABLE ONLY student_period
@@ -1043,7 +1043,7 @@ ALTER TABLE ONLY student_period
 
 
 --
--- Name: student_pkey; Type: CONSTRAINT; Schema: public; Owner: usuario2; Tablespace:
+-- Name: student_pkey; Type: CONSTRAINT; Schema: public; Owner: usuario2; Tablespace: 
 --
 
 ALTER TABLE ONLY student
@@ -1051,7 +1051,7 @@ ALTER TABLE ONLY student
 
 
 --
--- Name: student_requests_tutoring_pkey; Type: CONSTRAINT; Schema: public; Owner: usuario2; Tablespace:
+-- Name: student_requests_tutoring_pkey; Type: CONSTRAINT; Schema: public; Owner: usuario2; Tablespace: 
 --
 
 ALTER TABLE ONLY student_requests_tutoring
@@ -1059,7 +1059,7 @@ ALTER TABLE ONLY student_requests_tutoring
 
 
 --
--- Name: subject_class_hours_pkey; Type: CONSTRAINT; Schema: public; Owner: usuario2; Tablespace:
+-- Name: subject_class_hours_pkey; Type: CONSTRAINT; Schema: public; Owner: usuario2; Tablespace: 
 --
 
 ALTER TABLE ONLY subject_class_hours
@@ -1067,7 +1067,7 @@ ALTER TABLE ONLY subject_class_hours
 
 
 --
--- Name: subject_pkey; Type: CONSTRAINT; Schema: public; Owner: usuario2; Tablespace:
+-- Name: subject_pkey; Type: CONSTRAINT; Schema: public; Owner: usuario2; Tablespace: 
 --
 
 ALTER TABLE ONLY subject
@@ -1075,7 +1075,7 @@ ALTER TABLE ONLY subject
 
 
 --
--- Name: teacher_class_pkey; Type: CONSTRAINT; Schema: public; Owner: usuario2; Tablespace:
+-- Name: teacher_class_pkey; Type: CONSTRAINT; Schema: public; Owner: usuario2; Tablespace: 
 --
 
 ALTER TABLE ONLY teacher_class
@@ -1083,7 +1083,7 @@ ALTER TABLE ONLY teacher_class
 
 
 --
--- Name: teacher_has_tutoring_hours_pkey; Type: CONSTRAINT; Schema: public; Owner: usuario2; Tablespace:
+-- Name: teacher_has_tutoring_hours_pkey; Type: CONSTRAINT; Schema: public; Owner: usuario2; Tablespace: 
 --
 
 ALTER TABLE ONLY teacher_has_tutoring_hours
@@ -1091,7 +1091,7 @@ ALTER TABLE ONLY teacher_has_tutoring_hours
 
 
 --
--- Name: teacher_period_pkey; Type: CONSTRAINT; Schema: public; Owner: usuario2; Tablespace:
+-- Name: teacher_period_pkey; Type: CONSTRAINT; Schema: public; Owner: usuario2; Tablespace: 
 --
 
 ALTER TABLE ONLY teacher_period
@@ -1099,7 +1099,7 @@ ALTER TABLE ONLY teacher_period
 
 
 --
--- Name: teacher_pkey; Type: CONSTRAINT; Schema: public; Owner: usuario2; Tablespace:
+-- Name: teacher_pkey; Type: CONSTRAINT; Schema: public; Owner: usuario2; Tablespace: 
 --
 
 ALTER TABLE ONLY teacher
@@ -1107,7 +1107,7 @@ ALTER TABLE ONLY teacher
 
 
 --
--- Name: teacher_subject_pkey; Type: CONSTRAINT; Schema: public; Owner: usuario2; Tablespace:
+-- Name: teacher_subject_pkey; Type: CONSTRAINT; Schema: public; Owner: usuario2; Tablespace: 
 --
 
 ALTER TABLE ONLY teacher_subject
@@ -1262,3 +1262,4 @@ GRANT ALL ON SCHEMA public TO PUBLIC;
 --
 -- PostgreSQL database dump complete
 --
+
